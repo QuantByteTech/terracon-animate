@@ -36,8 +36,10 @@ const Index = () => {
   };
 
   return (
-    <AnimatePresence mode="wait">
-      <Loader onLoadingComplete={handleLoadingComplete} />
+    <>
+      {isLoading && (
+        <Loader onLoadingComplete={handleLoadingComplete} />
+      )}
       
       {!isLoading && (
         <motion.div 
@@ -79,7 +81,7 @@ const Index = () => {
           )}
         </motion.div>
       )}
-    </AnimatePresence>
+    </>
   );
 };
 

@@ -38,7 +38,7 @@ const Loader = ({ onLoadingComplete }: LoaderProps) => {
       transition: {
         delay: i * 0.1,
         duration: 0.5,
-        ease: [0.6, 0.01, -0.05, 0.95],
+        ease: "easeOut",
       },
     }),
   };
@@ -46,7 +46,7 @@ const Loader = ({ onLoadingComplete }: LoaderProps) => {
   const company = "TERRACON";
 
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       {!isComplete ? (
         <motion.div
           className="fixed inset-0 bg-background flex flex-col items-center justify-center z-50"
@@ -56,7 +56,7 @@ const Loader = ({ onLoadingComplete }: LoaderProps) => {
             opacity: 0,
             transition: {
               duration: 0.8,
-              ease: [0.6, 0.01, -0.05, 0.95],
+              ease: "easeInOut",
             },
           }}
         >

@@ -142,7 +142,7 @@ const Navbar = () => {
       </motion.nav>
 
       {/* Mobile menu */}
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {isMenuOpen && (
           <motion.div
             className="fixed inset-0 bg-white z-40 flex items-center justify-center"

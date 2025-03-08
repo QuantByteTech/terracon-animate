@@ -1,4 +1,3 @@
-
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
@@ -32,7 +31,7 @@ const About = () => {
       opacity: 1,
       transition: { 
         duration: 0.7, 
-        ease: [0.6, 0.01, -0.05, 0.95]
+        ease: "easeOut"
       }
     }
   };
